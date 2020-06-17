@@ -1,2 +1,2 @@
-a="Whatsupwhatsupwhatsup"
+a"Afrojack"
 print(a)
