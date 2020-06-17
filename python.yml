@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: true
+
+ 
+
+  tasks:
+  - name: build docker image using war file
+    command: docker build -t apython .
+    args:
+      chdir: /opt/docker
+
+ 
+
+  - name: Create Cotainer using simple devops image
+    command: docker run -d --name apython -p 8081:8081 apython
